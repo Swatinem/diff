@@ -70,6 +70,12 @@ describe('diff', function () {
 			d.should.eql(['nop', 'rep']);
 		});
 	});
+	it('should handle replace and delete', function () {
+		var a = [1, 2];
+		var b = [3];
+		var d = diff(a, b);
+		d.should.eql(['rep', 'del']);
+	});
 	it('should handle more complex cases (1)', function () {
 		var a = 'foobar';
 		var b = 'foib';

@@ -111,7 +111,7 @@ Diff.prototype.snake = function Diff_snake(astart, aend, bstart, bend) {
 	up[kup - 1] = aend;
 
 	var Dmax = (N + M + 1) / 2;
-	for (var D = 0; D < Dmax; D++) {
+	for (var D = 0; D <= Dmax; D++) {
 		var k, x, y;
 		// forward path
 		for (k = kdown - D; k <= kdown + D; k += 2) {
