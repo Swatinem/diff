@@ -1,0 +1,14 @@
+{
+  "name": "diff",
+  "repo": "Swatinem/diff",
+  "version": "0.0.1",
+  "description": "implementation of myers diff algorithm",
+  "keywords": [],
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "dependencies": {
+  },
+  "license": "LGPLv3"
+}

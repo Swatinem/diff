@@ -1,0 +1,11 @@
+node_modules
+components
+coverage
+npm-debug.log
+*.tgz
+*.patch
+*.diff
+test
+Makefile
+.travis.yml
+.jshintrc

@@ -1,0 +1,24 @@
+{
+  "name": "diff",
+  "description": "implementation of myers diff algorithm",
+  "version": "0.0.1",
+  "keywords": [],
+  "main": "./index",
+  "maintainers": [
+    "Arpad Borsos <arpad.borsos@googlemail.com> (http://swatinem.de)"
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {
+    "istanbul": "*",
+    "mocha": "*",
+    "should": "*",
+    "coveralls": "*",
+    "jshint": "*"
+  },
+  "scripts": {
+    "test": "make test-coveralls"
+  },
+  "repository": "git://github.com/Swatinem/diff.git",
+  "license": "LGPLv3"
+}
