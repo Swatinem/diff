@@ -89,7 +89,7 @@ Diff.prototype.lcs = function Diff_lcs(astart, aend, bstart, bend) {
 		var snake = this.snake(astart, aend, bstart, bend);
 
 		this.lcs(astart, snake.x, bstart, snake.y);
-		this.lcs(snake.x, aend, snake.y, bend);
+		this.lcs(snake.u, aend, snake.v, bend);
 	}
 };
 
@@ -132,7 +132,12 @@ Diff.prototype.snake = function Diff_snake(astart, aend, bstart, bend) {
 
 			if (deltaOdd && (kup - D < k) && (k < kup + D) &&
 			    up[k] <= down[k]) {
-				return {x: down[k], y: down[k] - k};
+				return {
+					x: down[k],
+					y: down[k] - k,
+					u: up[k],
+					v: up[k] - k,
+				};
 			}
 		}
 
@@ -155,7 +160,12 @@ Diff.prototype.snake = function Diff_snake(astart, aend, bstart, bend) {
 
 			if (!deltaOdd && (kdown - D <= k) && (k <= kdown + D) &&
 			    up[k] <= down[k]) {
-				return {x: up[k], y: up[k] - k};
+				return {
+					x: down[k],
+					y: down[k] - k,
+					u: up[k],
+					v: up[k] - k,
+				};
 			}
 		}
 	}
